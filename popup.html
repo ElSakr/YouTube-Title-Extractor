@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Title Extractor</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 400px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 18px;
+      color: #cc0000;
+    }
+    button {
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+    button:hover {
+      background-color: #990000;
+    }
+    #status {
+      margin-top: 10px;
+      color: #666;
+    }
+    #results {
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      display: none;
+    }
+    .video-item {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .video-date {
+      color: #666;
+      font-size: 12px;
+    }
+    .sort-controls {
+      margin-top: 10px;
+      display: none;
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Title Extractor</h1>
+  <p>Extract video titles from a YouTube channel page.</p>
+  <p>Make sure you're on a YouTube channel videos page (e.g., https://www.youtube.com/@ChannelName/videos)</p>
+  
+  <div class="button-group">
+    <button id="extractBtn">Extract Titles</button>
+    <button id="scrollBtn">Auto-Scroll & Extract</button>
+  </div>
+  <div id="status"></div>
+  
+  <div class="sort-controls">
+    <button id="sortOldestBtn">Sort: Oldest to Newest</button>
+    <button id="sortNewestBtn">Sort: Newest to Oldest</button>
+    <button id="copyBtn">Copy to Clipboard</button>
+  </div>
+  
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
